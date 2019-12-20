@@ -1,0 +1,319 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    min-height: 8vh;
+    background-color: rgb(48, 48, 48);
+}
+
+.logo {
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 20px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 30%;
+    padding-top: 10px;
+    z-index: 2;
+}
+
+.nav-links li {
+    list-style-type: none;
+}
+
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #ffffff;
+    margin: 5px;
+}
+
+/* Jumbotron Image */
+.jumbotron {
+    background-image: url('spa-4481583_1280.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    width: 100%;
+}
+
+.jumbotron .jumbotron-text {
+    text-align: center;
+    padding-top: 14rem;
+    color: #ffffff;
+    display:none;
+}
+
+.jumbotron-text h1 {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.jumbotron-text .btn {
+    border: none;
+    background-color: #cc99ff;
+    padding: 12px;
+    font-weight: bold;
+}
+
+.welcome .welcome-text {
+    text-align: center;
+    padding-top: 7rem;
+    display: none;
+}
+
+.welcome .welcome-text hr {
+    width: 10%;
+    height: 3px;
+    background-color: #cc99ff;
+    margin-left: 45%;
+}
+
+/* Welcome Massage Tech */
+.welcome-massage-tech  .fas{
+    background-color: #cc99ff;
+    color: #ffffff;
+    padding: 12px;
+    border:none;
+    border-radius: 30px;
+    font-size: 20px;
+}
+
+.welcome-massage-tech {
+    text-align: center;
+    border: 1px solid black;
+    padding: 10px;
+    padding-top: 12px;
+    display: none;
+}
+
+/* More information */
+.information {
+    background-image: url('massage-835468_1280.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    width: 100%;
+    margin-top: 7rem;
+}
+
+.information .information-text {
+    padding-top: 7rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+}
+
+.information .information-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+
+.information-text .btn {
+    border: none;
+    background-color: #cc99ff;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 12px;
+}
+
+/* Services */
+.services {
+    margin-top: 7rem;
+    text-align: center;
+    display: none;
+
+}
+
+.services .card {
+    text-align: center;
+    align-items: center;
+}
+
+.services img {
+    width: 100%;
+    height: 30vh;
+}
+
+.services-text {
+    margin: 30px;
+}
+
+.services p {
+    background-color: #cc99ff;
+    padding: 10px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Testimonials */
+.testimonials {
+    background-image: url('woman-3701713_1280.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 60vh;
+    width: 100%;
+    margin-top: 7rem;
+    display: none;
+}
+
+
+.testimonials img {
+    width: 100px;
+    height: 10vh;
+}
+
+.testimonials-text {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+.testimonials h1 {
+    color: #ffffff;
+    text-align: center;
+    padding-top: 6rem;
+}
+
+/* Blog */ 
+.blog {
+    padding-top: 7rem;
+    display: none;
+}
+
+.blog img {
+    width: 100%;
+    height: 30vh;
+}
+
+.blog-text h5 {
+    color:#cc99ff;
+    padding-top: 1rem;
+}
+
+.blog h1 {
+    text-align: center;
+}
+
+
+/* Footer */
+#footer {
+    background-color: rgb(105, 105, 105);
+    height: 40vh;
+    margin-top: 7rem;
+    color: #ffffff;
+}
+
+#footer .footer-text {
+    padding-top: 6.5rem;
+}
+
+#footer h3:hover {
+    color: #cc99ff;
+}
+
+/* Mobile Ready View */
+@media screen and (max-width: 1028px) {
+     .nav-links {
+         width: 60%;
+     }
+}
+
+
+@media screen and (max-width: 768px) {
+     body {
+         overflow-x: hidden;
+     }
+
+    .nav-links {
+        position: absolute;
+        right: 0px;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgb(48, 48, 48);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        transform: translate(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+    .burger {
+        display: block;
+    }
+    .testimonials {
+        height: 125vh;
+    }
+
+    #footer {
+        height: 95vh;
+        text-align: center;
+    }
+    
+}
+
+.nav-active {
+    transform: translate(0%);
+}
+
+.welcome-massage-tech {
+    margin: 10px;
+}
+
+.information {
+    height: 57vh;
+}
+
+
+@keyframes navLinkFade {
+    from{
+        opacity: 0;
+        transform: translate(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translate(0px);
+    }
+
+}
